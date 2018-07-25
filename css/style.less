@@ -1,0 +1,99 @@
+@font_main_color: #ff4d00;
+@sub_color: #fff;
+@mainFont: 24px;
+@minWidth: 550px;
+
+body{
+	height: 100%;
+	font-family: 'Oswald', sans-serif;
+}
+header{
+	min-height: 100vh;
+	width: 100%;
+	background: url(../img/header/fon.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+	.header__title{
+		margin-left: 60%;
+		padding-top: 15%;
+		width: @minWidth;
+		h1{
+			color: @font_main_color;
+			font-size: @mainFont*2.5;
+		}
+		p{
+			font-size: @mainFont*1.37;
+			color: @sub_color;
+		}
+	}
+}
+.main{
+	height: 60vh;
+	border-bottom: 1px solid grey;
+	.main__left{
+		width: @minWidth - 90px;
+		float: left;
+		margin-top: 50px;
+		h1{
+			font-size: @mainFont*1.5;
+			border-left: 3px solid @font_main_color;
+			padding-left: 5px;
+			font-weight: 600;
+		}
+		.main__left--list{
+			margin-top: 30px;
+			text-align: justify;
+			font-size: @mainFont - 1px;
+		}
+	}
+	.main__right{
+		float: left;
+		width: @minWidth;
+		height: @minWidth/1.83;
+		margin-top: 130px;
+		margin-left: 50px;
+		.carousel{
+			.carousel-inner{
+				.carousel-item{
+					img{
+						height: @minWidth/1.83;
+						width: @minWidth;
+					}
+				}
+			}
+		}
+	}
+}
+.sales{
+	text-align: center;
+	margin-top: 30px;
+	h1{
+		font-size: @mainFont*2;
+		color: @font_main_color;
+	}
+}
+.contacts{
+	border-top: 1px solid grey;
+	margin-top: 30px;
+	overflow: hidden;
+	padding-bottom:5px;
+	.contacts__phones{
+		float: left;
+		width: 50%;
+		text-align: center;
+		a{
+			color: @font_main_color;
+			font-size: @mainFont+6px;
+		}
+	}
+	.contacts__socio{
+		float: left;
+		text-align: center;
+		width: 50%;
+		a{
+			color:@font_main_color;
+			margin-right: 20px;
+		}
+	}
+}
