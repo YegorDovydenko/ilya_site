@@ -13,7 +13,7 @@ header{
 	background: url(../img/header/fon.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	opacity: 0.7;
+	opacity: 0.8;
 	.header__title{
 		margin-left: 60%;
 		padding-top: 15%;
@@ -52,7 +52,7 @@ header{
 		width: @minWidth;
 		height: @minWidth/1.83;
 		margin-top: 130px;
-		margin-left: 50px;
+		margin-left: 100px;
 		.carousel{
 			.carousel-inner{
 				.carousel-item{
@@ -65,35 +65,83 @@ header{
 		}
 	}
 }
-.sales{
+.chouse_us{
 	text-align: center;
 	margin-top: 30px;
+	margin-bottom: 30px;
 	h1{
 		font-size: @mainFont*2;
 		color: @font_main_color;
 	}
 }
-.contacts{
-	border-top: 1px solid grey;
-	margin-top: 30px;
+.bonusi{
 	overflow: hidden;
-	padding-bottom:5px;
-	.contacts__phones{
+	.bonusi__block{
 		float: left;
-		width: 50%;
+		width: 33%;
 		text-align: center;
-		a{
+		padding: 0 10px;
+		i{
 			color: @font_main_color;
-			font-size: @mainFont+6px;
+			margin-bottom: 20px;
+		}
+		h1{
+			font-size: @mainFont + 10px;
+			font-weight: 600;
+		}
+		p{
+			font-size: @mainFont - 5px;
+			color: grey;
+			margin-bottom: 50px;
 		}
 	}
-	.contacts__socio{
+}
+
+footer{
+	background: url(../img/footer/bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+	overflow: hidden;
+	.footer__left{
 		float: left;
-		text-align: center;
-		width: 50%;
+		width: 20%;
+		color: @sub_color;
+		text-align: justify;
+		margin-top: 10px;
+		margin-left: 50px;
+	}
+	.footer__center{
+		float: left;
+		width: 40%;
+		font-size: @mainFont;
+		color: @sub_color;
+		margin-left: 60px;
+		margin-top: 3px;
 		a{
-			color:@font_main_color;
-			margin-right: 20px;
+			color: @sub_color;
+			margin-left: 65px;
+
+		}
+		a:hover{
+			color: @font_main_color;
+		}
+	}
+	.footer__contacts{
+		width: 20%;
+		float: left;
+		h1{
+			font-size: @mainFont;
+			color: @sub_color;
+			margin-top: 7px;
+		}
+		a{
+			color: @sub_color;
+			font-size: @mainFont - 3px;
+		}
+		a:hover{
+			text-decoration: none;
+			color: @font_main_color;
 		}
 	}
 }
