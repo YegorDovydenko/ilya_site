@@ -18,47 +18,96 @@ header{
 		margin-left: 60%;
 		padding-top: 15%;
 		width: @minWidth;
+		@media screen and (max-width: 1390px){
+			margin-left: 50%;
+		}
+		@media screen and (max-width: 1120px){
+			margin-left: 40%;
+		}
+		@media screen and (max-width: 940px){
+			margin-left: 10%;
+		}
+		@media screen and (max-width: 630px){
+			width: @minWidth - 200px;
+			margin-left: 3%;
+		}
 		h1{
 			color: @font_main_color;
 			font-size: @mainFont*2.5;
+			@media screen and (max-width: 630px){
+				font-size: @mainFont*1.08;
+				font-weight: 600;
+			}
 		}
 		p{
 			font-size: @mainFont*1.37;
 			color: @sub_color;
+			@media screen and (max-width: 630px){
+				font-size: @mainFont - 3px;
+			}
 		}
 	}
 }
 .main{
-	height: 60vh;
+	height: 460px;
 	border-bottom: 1px solid grey;
-	.main__left{
-		width: @minWidth - 90px;
-		float: left;
-		margin-top: 50px;
-		h1{
-			font-size: @mainFont*1.5;
-			border-left: 3px solid @font_main_color;
-			padding-left: 5px;
-			font-weight: 600;
-		}
-		.main__left--list{
-			margin-top: 30px;
-			text-align: justify;
-			font-size: @mainFont - 1px;
-		}
+	@media screen and (max-width: 992px){
+		height: 350px;
 	}
-	.main__right{
-		float: left;
-		width: @minWidth;
-		height: @minWidth/1.83;
-		margin-top: 130px;
-		margin-left: 100px;
-		.carousel{
-			.carousel-inner{
-				.carousel-item{
-					img{
-						height: @minWidth/1.83;
-						width: @minWidth;
+	.container{
+		overflow: hidden;
+		.main__left{
+			width: @minWidth - 90px;
+			float: left;
+			margin-top: 50px;
+			@media screen and (max-width: 1200px){
+				width: @minWidth - 200px;
+			}
+			@media screen and (max-width: 992px){
+				width: @minWidth - 240px;
+			}
+			h1{
+				font-size: @mainFont*1.5;
+				border-left: 3px solid @font_main_color;
+				padding-left: 5px;
+				font-weight: 600;
+			}
+			.main__left--list{
+				margin-top: 30px;
+				text-align: justify;
+				font-size: @mainFont - 1px;
+				@media screen and (max-width: 1200px){
+					font-size: @mainFont - 5px;
+				}
+				@media screen and (max-width: 992px){
+					font-size: @mainFont - 10px;
+				}
+			}
+		}
+		.main__right{
+			float: left;
+			width: @minWidth;
+			height: @minWidth/1.83;
+			margin-top: 120px;
+			margin-left: 100px;
+			@media screen and (max-width: 1200px){
+				margin-left: 30px;
+			}
+			@media screen and (max-width: 992px){
+				width: @minWidth - 200px;
+				height: (@minWidth - 200px)/1.83;
+			}
+			.carousel{
+				.carousel-inner{
+					.carousel-item{
+						img{
+							height: @minWidth/1.83;
+							width: @minWidth;
+							@media screen and (max-width: 992px){
+								width: @minWidth - 200px;
+								height: (@minWidth - 200px)/1.83;
+							}
+						}
 					}
 				}
 			}
@@ -88,11 +137,20 @@ header{
 		h1{
 			font-size: @mainFont + 10px;
 			font-weight: 600;
+			@media screen and (max-width: 1200px){
+				font-size: @mainFont + 4px;
+			}
+			@media screen and (max-width: 992px){
+				font-size: @mainFont - 4px;
+			}
 		}
 		p{
 			font-size: @mainFont - 5px;
 			color: grey;
 			margin-bottom: 50px;
+			@media screen and (max-width: 1200px){
+				font-size: @mainFont - 7px;
+			}
 		}
 	}
 }
@@ -110,6 +168,10 @@ footer{
 		text-align: justify;
 		margin-top: 10px;
 		margin-left: 50px;
+		@media screen and (max-width: 1200px){
+			width: 24%;
+			margin-left: 10px;
+		}
 	}
 	.footer__center{
 		float: left;
@@ -118,9 +180,17 @@ footer{
 		color: @sub_color;
 		margin-left: 60px;
 		margin-top: 3px;
+		@media screen and (max-width: 992px){
+			width: 32%;
+			text-align: center;
+			margin-left: 50px;
+		}
 		a{
 			color: @sub_color;
 			margin-left: 65px;
+			@media screen and (max-width: 992px){
+				margin-left: 10px;
+			}
 
 		}
 		a:hover{
@@ -130,6 +200,14 @@ footer{
 	.footer__contacts{
 		width: 20%;
 		float: left;
+		@media screen and (max-width: 1200px){
+			width: 22%;
+			margin-left: 50px;
+		}
+		@media screen and (max-width: 992px){
+			width: 29%;
+			margin-left: 40px;
+		}
 		h1{
 			font-size: @mainFont;
 			color: @sub_color;
