@@ -54,6 +54,9 @@ header{
 	@media screen and (max-width: 992px){
 		height: 350px;
 	}
+	@media screen and (max-width: 576px){
+		height: 400px;
+	}
 	.container{
 		overflow: hidden;
 		.main__left{
@@ -66,11 +69,17 @@ header{
 			@media screen and (max-width: 992px){
 				width: @minWidth - 240px;
 			}
+			@media screen and (max-width: 768px){
+				width: 100%;
+			}
 			h1{
 				font-size: @mainFont*1.5;
 				border-left: 3px solid @font_main_color;
 				padding-left: 5px;
 				font-weight: 600;
+				@media screen and (max-width: 768px){
+					font-size: @mainFont*2;
+				}
 			}
 			.main__left--list{
 				margin-top: 30px;
@@ -81,6 +90,10 @@ header{
 				}
 				@media screen and (max-width: 992px){
 					font-size: @mainFont - 10px;
+				}
+				@media screen and (max-width: 768px){
+					font-size: @mainFont - 3px;
+					line-height: 1;
 				}
 			}
 		}
@@ -96,6 +109,9 @@ header{
 			@media screen and (max-width: 992px){
 				width: @minWidth - 200px;
 				height: (@minWidth - 200px)/1.83;
+			}
+			@media screen and (max-width: 768px){
+				display: none;
 			}
 			.carousel{
 				.carousel-inner{
@@ -130,6 +146,9 @@ header{
 		width: 33%;
 		text-align: center;
 		padding: 0 10px;
+		@media screen and (max-width: 576px){
+			width: 100%;
+		}
 		i{
 			color: @font_main_color;
 			margin-bottom: 20px;
@@ -143,6 +162,9 @@ header{
 			@media screen and (max-width: 992px){
 				font-size: @mainFont - 4px;
 			}
+			@media screen and (max-width: 768px){
+				font-size: @mainFont + 2px;
+			}
 		}
 		p{
 			font-size: @mainFont - 5px;
@@ -150,6 +172,9 @@ header{
 			margin-bottom: 50px;
 			@media screen and (max-width: 1200px){
 				font-size: @mainFont - 7px;
+			}
+			@media screen and (max-width: 768px){
+				font-size: @mainFont - 9px;
 			}
 		}
 	}
@@ -172,6 +197,13 @@ footer{
 			width: 24%;
 			margin-left: 10px;
 		}
+		@media screen and (max-width: 768px){
+			font-size: 14px;
+			width: 27%;
+		}
+		@media screen and (max-width: 576px){
+			display: none;
+		}
 	}
 	.footer__center{
 		float: left;
@@ -185,11 +217,23 @@ footer{
 			text-align: center;
 			margin-left: 50px;
 		}
+		@media screen and (max-width: 768px){
+			font-size: @mainFont - 2px;
+			margin-left: 20px;
+		}
+		@media screen and (max-width: 576px){
+			width: 45%;
+			margin-right: 5%;
+			margin-left: 0px;
+		}
 		a{
 			color: @sub_color;
 			margin-left: 65px;
 			@media screen and (max-width: 992px){
 				margin-left: 10px;
+			}
+			@media screen and (max-width: 768px){
+				margin-left: 5px;
 			}
 
 		}
@@ -208,6 +252,13 @@ footer{
 			width: 29%;
 			margin-left: 40px;
 		}
+		@media screen and (max-width: 768px){
+			margin-left: 20px;
+		}
+		@media screen and (max-width: 576px){
+			width: 45%;
+			margin-left: 4%;
+		}
 		h1{
 			font-size: @mainFont;
 			color: @sub_color;
@@ -216,6 +267,12 @@ footer{
 		a{
 			color: @sub_color;
 			font-size: @mainFont - 3px;
+			@media screen and (max-width: 768px){
+				font-size: @mainFont - 9px;
+			}
+			@media screen and (max-width: 576px){
+				font-size: @mainFont - 7px;
+			}
 		}
 		a:hover{
 			text-decoration: none;
